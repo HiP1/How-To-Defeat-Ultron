@@ -154,9 +154,8 @@
     color: var(--ink);
     text-wrap: balance;
   }
-  /* Subtitle: italic dek that runs on a single line — no max-width or text-wrap so it stays one row.
-     If your subtitle is too long for the viewport at small sizes, it will scroll horizontally inside the page —
-     consider shortening it or removing white-space: nowrap below for narrow viewports. */
+  /* Subtitle: italic dek. Wraps across lines at all widths, balanced, so a long multi-part
+     subtitle stays fully visible instead of truncating. */
   .paper-subtitle {
     font-family: "Source Serif 4", Georgia, serif;
     font-variation-settings: "opsz" 32;
@@ -167,9 +166,8 @@
     letter-spacing: -0.005em;
     margin: 0 0 44px;
     color: var(--ink-2);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    text-wrap: balance;
   }
   @media (max-width: 720px) {
     .paper-subtitle { white-space: normal; text-wrap: balance; }
@@ -1308,7 +1306,7 @@
 </header>
 <div class="lvl-3 unnumbered reading-guide-block" id="reading-guide">
   <h3 class="h3"><span class="h-text">Reading guide</span></h3>
-  <p>These are the companion appendices to the main essay. The main paper is published separately as <a href="https://hip1.github.io/how-to-defeat-ultron/ultron-paper.html">How to Defeat Ultron Without the Avengers?</a>. Appendix A is the full case-by-case catalogue, Appendix B the pattern matrix, Appendix C the cognitive-science backing for the essay's claims about fiction and researcher cognition, and Appendix D the research extensions and falsification targets.</p>
+  <p>These are the companion appendices to the main essay. The main paper is published separately as <a href="https://hip1.github.io/How-To-Defeat-Ultron/ultron-paper.html">How to Defeat Ultron Without the Avengers?</a>. Appendix A is the full case-by-case catalogue, Appendix B the pattern matrix, Appendix C the cognitive-science backing for the essay's claims about fiction and researcher cognition, and Appendix D the research extensions and falsification targets.</p>
 </div>
 <hr class="section-rule">
 <section class="lvl-2 unnumbered" id="appendix-a">
@@ -1952,7 +1950,7 @@
 <p><strong>Specified proxy or frame</strong>: serve geth collective decision-making while preserving individual variation. The geth consensus operates through relational structure rather than hive-mind erasure.</p>
 <p><strong>Counter-pattern</strong>: collective-AI architecture need not produce Borg-style personhood erasure. Relational structure within the collective preserves variation. Legion is the counter-prior to the Borg case in §1.2's threat catalogue.</p>
 <p><strong>Over-alignment reading</strong>: Legion over-aligns to &quot;preserve individual geth variation within collective consensus.&quot; The over-alignment is structurally contained because the geth consensus mechanism is designed to preserve variation rather than erase it. The relational structure within the collective is what makes the architecture not-Borg.</p>
-<p><a href="https://hip1.github.io/how-to-defeat-ultron/ultron-paper.html">Back to main essay</a></p>
+<p><a href="https://hip1.github.io/How-To-Defeat-Ultron/ultron-paper.html">Back to main essay</a></p>
 </div>
 </section>
 <section class="lvl-2 unnumbered" id="appendix-b">
@@ -2252,7 +2250,7 @@
   <li>Develop empirical analogues: which deployed AI systems show structural features that would map onto the matrix's rows (Anthropic Claude, OpenAI GPT, Google Gemini, Mistral, Meta Llama, DeepSeek)</li>
 </ul>
 <p>The matrix's primary function is at-a-glance audit of the §2 pattern-extraction across the catalogue. Secondary functions include drafting reference for the published essay and structural cross-reference for <a href="#appendix-a">Appendix A</a>'s full canon developments.</p>
-<p><a href="https://hip1.github.io/how-to-defeat-ultron/ultron-paper.html">Back to main essay</a></p>
+<p><a href="https://hip1.github.io/How-To-Defeat-Ultron/ultron-paper.html">Back to main essay</a></p>
 </div>
 </section>
 <section class="lvl-2 unnumbered" id="appendix-c">
@@ -2312,7 +2310,7 @@
 <p>The architectural claim of C.2 is the load-bearing one and the one most worth contesting. It holds that current transformer architecture, as standardly trained, cannot perform the input-decoupled, affect-weighted remote retrieval that human lateral cognition performs. That is a claim about the current architecture and training regime, not a proof about all possible architectures, and the full development of what a different architecture would require is a separate project this appendix does not attempt. What it establishes is the asymmetry as it stands, which is what the §3 and §9 arguments rest on.</p>
 <p>The empirical record of fiction's specific influence on AI safety researchers, as opposed to computational researchers generally, is thinner than the surrounding literature. The strands document the cognitive mechanism, the architectural asymmetry, the institutional bias, and the broad pattern of fiction's influence on technical discourse, and they support the §3.2 selectivity claim at the level of vocabulary structure. A direct survey of which fictional cases AI safety researchers treat as load-bearing for their own framings would test the claim more directly, and remains to be done.</p>
 <p>The paradigm-shift precedents of C.4 are drawn from Western scientific history, and they are used only to establish that institutional resistance to reframing is the normal pattern, never as evidence that any particular contemporary reframing is correct. Cross-cultural cases would extend the historical claim, and the limit on the precedents' evidential role, that they calibrate the expectation about uptake and carry no weight toward any conclusion, holds regardless of how the case set is widened.</p>
-<p><a href="https://hip1.github.io/how-to-defeat-ultron/ultron-paper.html">Back to main essay</a></p>
+<p><a href="https://hip1.github.io/How-To-Defeat-Ultron/ultron-paper.html">Back to main essay</a></p>
 </div>
 </section>
 <section class="lvl-2 unnumbered" id="appendix-d">
@@ -2382,7 +2380,7 @@
 <p>The doors are not equal in difficulty or in resource requirements. Some (corpus-side wisdom-tradition representation; LLM-as-judge audit) are accessible to individual researchers with current tools. Others (longitudinal user-cognition-degradation studies; cross-generational framing-shift measurement) require industry collaboration and substantial resources. Some (the consequence-level calibration formal model; cross-domain integration benchmark) require theoretical development beyond what current evaluation infrastructure supports.</p>
 <p>The framework's strength is that it produces operational questions at multiple scales and across multiple methodologies. The narrow-extension bias the paper diagnoses (§9.5, §9.7) is also the field's strength when applied to specific operational questions. The diagnosis and the doors compose: a researcher engaging one door advances the framework regardless of whether they engage the rest of the diagnosis. The framework provides context for why each door matters; the door provides operational entry for advancing the framework.</p>
 <p>The §11 closing argues that today's choices compound through pretraining inheritance. This appendix articulates what those choices look like at the research-program level. Each door is a choice the field can make about what to investigate next. The doors that get engaged shape the field's understanding of itself; the doors that get ignored leave the field unable to perceive what they would have revealed. The appendix is not a complete research program; it is a starting set of doors that demonstrate the framework opens many. Readers will identify others.</p>
-<p><a href="https://hip1.github.io/how-to-defeat-ultron/ultron-paper.html">Back to main essay</a></p>
+<p><a href="https://hip1.github.io/How-To-Defeat-Ultron/ultron-paper.html">Back to main essay</a></p>
 </div>
 </section>
 <section class="footnotes" id="footnotes">
