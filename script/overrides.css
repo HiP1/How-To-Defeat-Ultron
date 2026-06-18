@@ -1,0 +1,109 @@
+
+  /* ════════════════════════════════════════════════════════════
+     WAWB-specific overrides (epilogue paper)
+     ════════════════════════════════════════════════════════════ */
+
+  /* 1. Bold lead-ins: keep the sage-label prominence that makes them
+     stand out, but render inline so the body flows after them instead
+     of a wrapping uppercase block badge. */
+  p.labeled .p-label {
+    font-family: "Inter", sans-serif;
+    font-size: 0.82em;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: var(--label);
+    font-weight: 700;
+    margin-right: 6px;
+    display: inline;
+    padding: 1px 7px;
+    background: color-mix(in srgb, var(--label) 12%, transparent);
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    vertical-align: baseline;
+  }
+
+  /* 2. Appendix divisions get the full heading treatment, not the
+     de-emphasised grey small-caps used for back-matter labels. */
+  section.lvl-2.unnumbered[id^="appendix-"] .h2 {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 18px;
+    margin-bottom: 32px;
+  }
+  section.lvl-2.unnumbered[id^="appendix-"] .h2 .h-text {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: clamp(24px, 3vw, 32px);
+    letter-spacing: -0.01em;
+    text-transform: none;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* 3. Body text sits a step quieter than the lead-ins and headings,
+     so the front-loaded bold leads carry the eye. Applies throughout
+     the paper and the appendices, not just the catalogue. This must
+     cover labeled paragraphs too: the body prose after a lead-in label
+     is still body text and should match the quieter weight of plain
+     paragraphs, while the .p-label badge keeps its prominence (rule 1). */
+  .prose p,
+  section p { color: var(--ink-2); }
+  /* Lead-in labels stay sage and prominent against the quieter body. */
+  p.labeled .p-label { color: var(--label); }
+  /* A standalone bold paragraph (e.g. a catalogue case name) reads as a
+     heading-ish lead, full ink and slightly larger. */
+  p > strong:only-child {
+    color: var(--ink);
+    font-size: 1.05em;
+  }
+
+  /* 4. Back matter (Methodology, Appendices pointer) uses the reading-
+     guide visual language to set it apart from the essay body. */
+  section.lvl-2.unnumbered[id="methodology-and-ai-use"],
+  section.lvl-2.unnumbered[id="appendices"] {
+    background: var(--reading-bg);
+    border-left: 2px solid var(--reading-bar);
+    border-radius: 2px;
+    padding: 32px 36px;
+    margin-top: 64px;
+  }
+  section.lvl-2.unnumbered[id="methodology-and-ai-use"] .h2,
+  section.lvl-2.unnumbered[id="appendices"] .h2 {
+    margin-bottom: 18px;
+  }
+  section.lvl-2.unnumbered[id="methodology-and-ai-use"] .h2 .h-text,
+  section.lvl-2.unnumbered[id="appendices"] .h2 .h-text {
+    color: var(--reading-bar);
+  }
+
+
+  /* The final line is a full-sentence inline code (a prompt). Inline code
+     normally nowraps; allow this one to wrap and give it a touch more room. */
+  /* The final line: a quoted prompt folded into its setup sentence.
+     Fixed 13px so the whole prompt stands on a single line. */
+  p.final-line-p code {
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 2px 7px;
+  }
+  p.final-line-p { margin-top: 8px; }
+
+  /* ─── Footnotes ─────────────────────────────────────────
+     Footnote markers render as small superscript links; definitions
+     collect into a footnotes section at the end of the document. */
+  sup.fn-ref { font-size: 0.7em; line-height: 0; }
+  sup.fn-ref a { text-decoration: none; color: var(--accent); padding: 0 1px; }
+  section.footnotes { margin-top: 56px; }
+  section.footnotes .fn-rule {
+    border: none; border-top: 1px solid var(--rule, #ddd);
+    width: 40%; margin: 0 0 16px;
+  }
+  ol.fn-list {
+    list-style: none; padding-left: 0; margin: 0;
+    font-size: 0.9em; color: var(--ink-2);
+  }
+  ol.fn-list li { margin: 0 0 10px; line-height: 1.55; }
+  ol.fn-list .fn-id {
+    font-family: "Inter", sans-serif; font-size: 0.85em;
+    color: var(--label); margin-right: 6px;
+  }
+  a.fn-back { text-decoration: none; color: var(--accent); margin-left: 4px; }

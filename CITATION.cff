@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use or cite this work, please cite it as below."
+title: "How to Defeat Ultron Without the Avengers? What Are We Actually Building? How Do We Contain It? And the Missing Killswitch"
+abstract: "A critical essay, the epilogue to The Training Landscape series, examining how the AI safety field's threat model was inherited from science fiction and testing it against the 2024-2026 measured record."
+type: article
+authors:
+  - family-names: Phan
+    given-names: Ivan
+    orcid: "https://orcid.org/0009-0003-1095-5855"
+    affiliation: "Independent Researcher"
+date-released: 2026-06-18
+license: CC-BY-4.0
+doi: 10.5281/zenodo.20739166
+url: "https://hip1.github.io/How-To-Defeat-Ultron/ultron-paper.html"
+keywords:
+  - over-alignment
+  - AI safety
+  - threat-model inheritance
+  - science fiction and AI
+  - calibration
+  - accountability locus
+  - wisdom
+  - critical essay
